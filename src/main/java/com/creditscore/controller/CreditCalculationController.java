@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.creditscore.model.CreditScoreInputs;
-import com.creditscore.service.CreditCalculationService;
+import com.creditscore.service.ICreditCalculationService;
 
 @RestController
 @RequestMapping("/credit")
@@ -20,7 +20,7 @@ public class CreditCalculationController {
     private final Logger logger = LoggerFactory.getLogger(CreditCalculationController.class);
 
     @Autowired
-    private CreditCalculationService crCalService;
+    private ICreditCalculationService crCalService;
 
     @PostMapping(path = "/calculateCreditScore")
     @ResponseStatus(HttpStatus.OK)

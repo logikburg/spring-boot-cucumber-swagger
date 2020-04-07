@@ -44,7 +44,7 @@ public class SpringBootRestControllerApplicationTest {
 		CreditScoreInputs crScoreInputs = new CreditScoreInputs(6, "Sole Proprietorship", 10);
 		HttpEntity<CreditScoreInputs> request = new HttpEntity<>(crScoreInputs);
 		ResponseEntity<String> result = this.testRestTemplate.postForEntity(uri, request, String.class);
-		Assert.assertEquals(56, Integer.parseInt(result.getBody()));
+		Assert.assertEquals(68, Integer.parseInt(result.getBody()));
 	}
 	
 	@Test

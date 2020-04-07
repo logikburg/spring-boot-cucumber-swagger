@@ -7,5 +7,6 @@ Feature: Credit Assessment Calculator
 
   Examples:
     | numberOfEmployees | companyType | numberOfYearsOperated | result |
-    | 6 | "Sole Proprietorship" | 5 | 48 |
-    | 10 | "Limited Liability Company" | 8 | 48 |
+    | 6 | "Sole Proprietorship" | 5 | 60 |
+    | 10 | "Limited Liability Company" | 8 | 111 |
+    | 0 | "" | 0 | 0 |

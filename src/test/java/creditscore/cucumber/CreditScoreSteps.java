@@ -6,7 +6,8 @@ import org.slf4j.LoggerFactory;
 
 import com.creditscore.controller.CreditCalculationController;
 import com.creditscore.model.CreditScoreInputs;
-import com.creditscore.service.CreditCalculationService;
+import com.creditscore.service.ICreditCalculationService;
+import com.creditscore.service.implementation.CreditCalculationService;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -42,7 +43,7 @@ public class CreditScoreSteps {
 	Assert.assertNotNull("NumberOfEmployees is NaN", crScoreIn.getNumberOfEmployees());
 	Assert.assertNotNull("TimeInBusiness  is NaN", crScoreIn.getTimeInBusiness());
 
-	CreditCalculationService crCalService = new CreditCalculationService();
+	ICreditCalculationService crCalService = new CreditCalculationService();
 
 	_creditScore = crCalService.calculateCreditScore(crScoreIn);
     }
